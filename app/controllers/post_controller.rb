@@ -4,7 +4,7 @@ class PostController < ApplicationController
   #View: /app/views/post/index.html.erb
   def index
     
-    #get all posts from model TEST TEST
+    #get all posts from model
     @posts = Post.all
   end
   
