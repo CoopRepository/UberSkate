@@ -1,0 +1,24 @@
+<% #Controller: /app/controllers/post_controller %>
+<% #Method: index()  %>
+<!-- adfasdf -->
+
+
+<head>
+    <title>Map View</title>
+    <h1 style="font-family:Verdana; color:Red; font-size:24"><b>uberskate</b></h1>
+</head>
+
+<body>
+    <% @posts.each do |post| %>
+        
+        <h2><%= post.title %> </h2>
+                
+        <p><%= post.description %></p>
+                
+        <%= post.lat %> <br>
+        <%= post.long %>
+        
+        
+                
+    <%end%>
+</body>
