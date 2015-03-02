@@ -6,3 +6,6 @@ Scrolling nav
 (http://startbootstrap.com/template-overviews/scrolling-nav/)
 
 
+Usefull links:
+
+http://guides.rubyonrails.org/routing.html - Rails Routing
