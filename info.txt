@@ -1,0 +1,8 @@
+
+Packages used:
+Bootstrap
+jquery-1.11.2
+Scrolling nav
+(http://startbootstrap.com/template-overviews/scrolling-nav/)
+
+
