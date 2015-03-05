@@ -2,68 +2,23 @@
 <% #Method: index()  %>
 <!-- adfasdf -->
 
-
-<html>
+<!-- HTML -->
+<html lang-"en">
+    
+    <!-- head of file -->
     <head>
         <title>Uberskate</title>
+        <%= render 'nav' %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    
+    <!-- body -->
     <body>
- 
-        <div class = "navbar navbar-inverse navbar-static-top">
-            <div class = "container">
-                 
-                 <%= link_to(@index) do %>
-                     <div class = "navbar-brand">Uberskate</div>
-                 <% end %>
-                               
-                <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                    <span class = "icon-bar"></span>
-                </button>
-                    
-                               
-                <div class = "collapse navbar-collapse navHeaderCollapse">
-                    <ul class = "nav navbar-nav navbar-right">
-                                       
-                        <li class = "active">
-                            <%= link_to(@index) do %>
-                                <div>Home</div>
-                            <% end %>
-
-                        </li>
-                        <li>
-                            <%= link_to "Showcase", controller: "posts", action: "new" %>
-                        </li>
-                            
-                        <li class = "dropdown">
-                                                       
-                            <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
-                                
-                            <ul class = "dropdown-menu">
-                                <li><a href = "https://twitter.com/FATASSFat">Twitter</a></li>
-                                <li><a href = "https://www.facebook.com/PooPourriCanada">Facebook</a></li>
-                                <li><a href = "https://www.google.ca/#q=poo">Google+</a></li>
-                                <li><a href = "https://instagram.com/gayasian2/">Instagram</a></li>
-                            </ul>
-                                               
-                        </li>
-                            
-                        <li><a href = "#">About</a></li>
-                        <li><a href = "#">Contact</a></li>
-                                       
-                    </ul>
-                               
-                </div>
-            </div>
-        </div>
- 
         <div class = "container">
             
             <div class = "jumbotron">
-                <center><h1>welcome</h1>
-                <p>descg.</p>
+                <center><h1>Welcome to Uberskate</h1>
+                <p>challenge other skaters in your area</p>
                 <a class = "page-scroll" href="#map"><button class = "btn btn-default">Map</button></a>
                 <a class = "btn btn-info">Tweet it!</a></center>
                 
@@ -78,34 +33,37 @@
             </div>
                
         </div>
-               
+        
         <div class = "container" id = map>
            
             <div class = "row">
                
-                <div class = "col-md-3">
+                <h3><a href = "#">What our app does</a></h3>
+                <p>Nothin yet..</p>
+                <a href = "#" class = "btn btn-default">Read More</a>
                    
-                    <h3><a href = "#">What our app does</a></h3>
-                    <p>Nothin yet..</p>
-                    <a href = "#" class = "btn btn-default">Read More</a>
-                   
-                    <img src="http://geology.com/world/world-map.gif">
-                </div>
-              
+                <img src="http://geology.com/world/world-map.gif">
+
             </div>
             
            
         </div>
- 
-        <div class = "navbar navbar-default navbar-fixed-bottom">
-               
-            <div class = "container">
-                <p class = "navbar-text pull-left">Site site</p>
-                <a href = "http://youtube.com/codersguide" class = "navbar-btn btn-danger btn pull-right">Subscribe on YouTube</a>
-            </div>
-               
+        
+        
+        <div class = "container" id = "about">
+            <div class = "col-md">
+                <center><h2>About</h2></center>
+            </div>  
         </div>
-
+        
+        <div class = "container" id = "about">
+            <div class = "col-md-offset-4">
+                <div class = "jumbotron">
+                    <h3>What it does</h3>
+                    
+                </div>
+            </div>
+        </div>
        
         
     </body>
