@@ -2,9 +2,12 @@
     <!-- navbar begin -->
     <div class = "navbar navbar-inverse navbar-static-top">
         <div class = "container">
-                 
+        
+            <a href = "https://www.twitter.com"> <img class = "navbar-right-icon-adj" src="/images/twitter.png"> </a>
+            <a href = "https://www.facebook.com"> <img class = "navbar-right-icon" src="/images/facebook.png"> </a>    
+            
             <!-- Create the Uberskate icon -->
-            <%= link_to(@index) do %>
+            <%= link_to controller: "posts" do %>
                 <div class = "navbar-brand">Uberskate</div>
             <% end %>
             
@@ -13,20 +16,38 @@
                 <span class = "icon-bar"></span>
                 <span class = "icon-bar"></span>
             </button>
-                    
-                               
+            
+        
             <div class = "collapse navbar-collapse navHeaderCollapse">
                 <ul class = "nav navbar-nav navbar-right">
-                                       
-                    <li class = "active">
-                        <%= link_to(@index) do %>
-                            <div>Home</div>
-                        <% end %>
-
-                    </li>
-                    <li>
-                        <%= link_to "Showcase", controller: "posts", action: "new" %>
-                    </li>
+                    
+                    <!-- Home navigation button-->
+                    <li id = "home"> <%= link_to "Home", controller: "posts", action: "index"%> </li>
+                    
+                    <% if current_page?(:controller => 'posts')%>
+                        <script> document.getElementById("home").className += "active"; </script>
+                    <% end %>
+                    <!-- End -->
+                    
+                    <!-- <li><a class = "page-scroll" href="#about">About</a></li> -->
+                    <!-- About navigation button -->
+                    <li id = "usage"> <%= link_to "Usage", controller: "posts", action: "usage" %> </li>
+                    
+                    <% if current_page?(:controller => "posts", :action => "usage")%>
+                        <script> document.getElementById("usage").className += "active"; </script>
+                    <% end %>
+                    <!-- END -->
+                    
+                    
+                    <!-- Showcase navigation button-->
+                    <li id = "show"> <%= link_to "Showcase", controller: "posts", action: "new" %> </li>
+                    
+                    <% if current_page?(:controller => 'posts', :action => "new")%>
+                        <script> document.getElementById("show").className += "active"; </script>
+                    <% end %>
+                    <!-- End -->
+                    
+                    
                             
                     <li class = "dropdown">
                                                        
@@ -40,14 +61,27 @@
                         </ul>
                                            
                     </li>
-                            
-                    <li><a class = "page-scroll" href="#about">About</a></li>
+                
+                    
+                    
+                    
                     <li><a href = "#">Contact</a></li>
+                    
+                    
+                    
                                    
                 </ul>
+                
+
                            
             </div>
         </div>
     </div>
     <!-- End of navbar -->
+    
+    <div class="navbar-right">
+        
+        
+    </div>
+    
 </html>

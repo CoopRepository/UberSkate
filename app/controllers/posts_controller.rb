@@ -94,6 +94,10 @@ class PostsController < ApplicationController
     redirect_to(:action => "index")  
   end
   
+  def usage
+      #null
+  end
+  
   #private tag (all bellow will be private methods)
   private
   

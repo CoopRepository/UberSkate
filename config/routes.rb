@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   #default root set to index. 
   get 'posts/:id/delete' => 'posts#delete', :as => :products_delete
-  get 'about' => 'posts#index'
+  get 'usage' => 'posts#usage'
 
   root 'posts#index'
 

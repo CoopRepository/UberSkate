@@ -282,6 +282,12 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon_image{
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
 .glyphicon-asterisk:before {
   content: "\2a";
 }
@@ -4177,6 +4183,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-left: -15px;
   }
 }
+
+/* Use for icon directly beside other components */
+.navbar-right-icon {
+  float: right;
+  padding: 18px 10px 18px 60px;
+}
+
+/* Use for icons adjacent to others */
+.navbar-right-icon-adj {
+  float:right;
+  padding: 18px 5px;
+}
+
 .navbar-toggle {
   position: relative;
   float: right;
@@ -4837,6 +4856,7 @@ a.badge:focus {
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
+
 .jumbotron {
   padding: 30px 15px;
   margin-bottom: 30px;
@@ -4876,6 +4896,7 @@ a.badge:focus {
     font-size: 63px;
   }
 }
+
 .thumbnail {
   display: block;
   padding: 4px;
