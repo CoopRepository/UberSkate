@@ -6,6 +6,9 @@ class PostsController < ApplicationController
     
     #get all posts from model
     @posts = Post.all
+    
+    #generate the map veiw
+    gen_map(@posts)
   end
   
 
@@ -15,6 +18,9 @@ class PostsController < ApplicationController
     
     #get post specified by id
     @post = Post.find(params[:id])
+
+    #generate map with only specified post
+    gen_map(@post)
   end
   
 
@@ -87,8 +93,8 @@ class PostsController < ApplicationController
   #The Destroy method is connected to: delete (see above)
   def destroy
     
-    #get post specified by id
-    @post = Post.find(params[:id])
+    #get post specified by id and destroy
+    Post.find(params[:id]).destroy
     
     #redirect to the index page.
     redirect_to(:action => "index")  
@@ -100,6 +106,24 @@ class PostsController < ApplicationController
   
   #private tag (all bellow will be private methods)
   private
+  
+  #allows for the generation of a google map, given posts data
+  def gen_map(data)
+    
+    @hash = Gmaps4rails.build_markers(data) do |post, marker|
+      marker.lat post.lat
+      marker.lng post.long
+      marker.infowindow post.description
+      marker.picture({
+        "url" => "https://www.trubank.org/media/com_hotspots/images/categories/1418202665_A_map-pin.png",
+        "width" => 32,
+        "height" => 35})
+        
+      #add necicary data here.
+      marker.json( {title: post.title} )
+      end
+    
+  end
   
   #get the parameters for a given post from model
   def post_params

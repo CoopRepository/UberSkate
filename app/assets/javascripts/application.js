@@ -18,3 +18,5 @@
 //= require jquery-1.11.2
 //= require jquery.easing.min
 //= require scrolling-nav.js
+//= require underscore.min
+//= require gmaps/google
