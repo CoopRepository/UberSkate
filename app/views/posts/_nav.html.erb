@@ -22,7 +22,7 @@
                 <ul class = "nav navbar-nav navbar-right">
                     
                     <!-- Home navigation button-->
-                    <li id = "home"> <%= link_to "Home", controller: "posts", action: "index"%> </li>
+                    <li id = "home"> <%= link_to "Home", controller: "posts", action: "index" %> </li>
                     
                     <% if current_page?(:controller => 'posts')%>
                         <script> document.getElementById("home").className += "active"; </script>
@@ -54,10 +54,10 @@
                         <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
                                 
                         <ul class = "dropdown-menu">
-                            <li><a href = "https://twitter.com/FATASSFat">Twitter</a></li>
-                            <li><a href = "https://www.facebook.com/PooPourriCanada">Facebook</a></li>
-                            <li><a href = "https://www.google.ca/#q=poo">Google+</a></li>
-                            <li><a href = "https://instagram.com/gayasian2/">Instagram</a></li>
+                            <li><a href = "#">Twitter</a></li>
+                            <li><a href = "#">Facebook</a></li>
+                            <li><a href = "#">Google+</a></li>
+                            <li><a href = "#">Instagram</a></li>
                         </ul>
                                            
                     </li>

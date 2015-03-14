@@ -14,9 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require bootstrap.min
+
+//JQuery
 //= require jquery-1.11.2
 //= require jquery.easing.min
+
+//Bootstrap
+//= require bootstrap.min
 //= require scrolling-nav.js
+
+//Gmaps4Rails
 //= require underscore.min
 //= require gmaps/google
+
+//Full Calendar
+//= require moment
+//= require fullcalendar

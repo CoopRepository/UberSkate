@@ -1,6 +1,57 @@
 
-<%= render 'nav' %>
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
-<%= render 'form' %>
+<!-- HTML -->
+<html lang-"en">
+    
+    <!-- head of file -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <title>New Post</title>
+        
+        <%= render 'nav' %>
+    
+    </head>
+    
+    <!-- body -->
+    <body>
+        
+        <div class="container">
+            <%= render 'form' %>
+            
+            <br>
+            <div id='calendar'></div>
+        </div>
+        
+        <script>
+            $(document).ready(function() {
+
+        		$('#calendar').fullCalendar({
+        			defaultDate: $('#calendar').fullCalendar('today'),
+        			editable: true,
+        			eventLimit: true, // allow "more" link when too many events
+        			events: [
+        				{
+        					title: 'All Day Event',
+        					url: "http://www.google.com/",
+        					start: '2015-03-01'
+        				}
+        			]
+        		});
+        		
+            });
+            
+        </script>
+        
+        <style>
+        
+        	#calendar {
+        		width: 600px;
+        		height: 600px;
+        	}
+
+        </style>
+        
+    </body>
+    
+    
+</html>

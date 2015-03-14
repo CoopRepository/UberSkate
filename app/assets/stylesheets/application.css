@@ -12,5 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ 
+ //Bootstrap
  *= require bootstrap
+ 
+ //Full Calendar
+ *= require fullcalendar
+ *= require fullcalendar.print
+ 
  */

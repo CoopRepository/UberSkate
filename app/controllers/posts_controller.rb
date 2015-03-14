@@ -104,6 +104,11 @@ class PostsController < ApplicationController
       #null
   end
   
+  def gmaps4rails_infowindow
+    "<h1>HELLO WORLD</h1>"
+  end
+
+  
   #private tag (all bellow will be private methods)
   private
   
@@ -113,16 +118,25 @@ class PostsController < ApplicationController
     @hash = Gmaps4rails.build_markers(data) do |post, marker|
       marker.lat post.lat
       marker.lng post.long
-      marker.infowindow post.description
-      marker.picture({
-        "url" => "https://www.trubank.org/media/com_hotspots/images/categories/1418202665_A_map-pin.png",
-        "width" => 32,
-        "height" => 35})
+      marker.infowindow "
+      
+      <div style=\"width: 300px; height:200px; padding:1%;\">  
+        <center><h3>#{post.title}</h3>
         
-      #add necicary data here.
-      marker.json( {title: post.title} )
+        <center><p>#{post.description}</p>
+        
+        <br>
+        #{post.lat}
+         | 
+        #{post.long}
+      
+      </div>
+      
+      <button>Click me</button>
+      
+      "
       end
-    
+          
   end
   
   #get the parameters for a given post from model

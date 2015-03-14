@@ -29,6 +29,12 @@ gem 'spring',        group: :development
 # Use gmaps4rails for map api. Read more: https://github.com/apneadiving/Google-Maps-for-Rails
 gem 'gmaps4rails'
 
+# Full Calendar api. Read more: https://github.com/bokmann/fullcalendar-rails
+gem 'fullcalendar-rails'
+
+# Moment javascript. Read more: https://github.com/bokmann/fullcalendar-rails
+gem 'momentjs-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
