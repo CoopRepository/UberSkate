@@ -58,6 +58,12 @@
             handler.fitMapToBounds();
             });
           
+          handler.map.callback = function() {
+				google.maps.event.addListener(Gmaps.map.map, 'click', function(event) {
+				  clearOverlays();
+				  placeMarker(event.latLng);
+				});
+			};
             
             
         </script>
@@ -65,8 +71,6 @@
         <%@posts.each do |post|%>
             <h3><%=post.title%> <%=post.id%></h3>
         <%end%>
-        
-       
-        
+      
     </body>
 </html>

@@ -103,26 +103,28 @@ class PostsController < ApplicationController
   def usage
       #null
   end
-  
-  def gmaps4rails_infowindow
-    "<h1>HELLO WORLD</h1>"
-  end
 
-  
   #private tag (all bellow will be private methods)
   private
   
   #allows for the generation of a google map, given posts data
   def gen_map(data)
     
+    #generate a jason hash for the marker structure
     @hash = Gmaps4rails.build_markers(data) do |post, marker|
+      
+      #set the latitude and logetude position of the marker
       marker.lat post.lat
       marker.lng post.long
+      
+      #define the html contents for the infowindow
       marker.infowindow "
       
-      <div style=\"width: 300px; height:200px; padding:1%;\">  
+      <!-- div style tag -->
+      <div style=\"width: 300px; height:200px; padding:1%;\"> 
+      
+        <!-- contents -->
         <center><h3>#{post.title}</h3>
-        
         <center><p>#{post.description}</p>
         
         <br>
