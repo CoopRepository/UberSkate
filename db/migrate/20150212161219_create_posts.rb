@@ -7,7 +7,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :lat
       t.string :long
       
-      t.timestamps
+      t.timestampsd
     end
   end
 end

@@ -6,5 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Post.create(title: "Skate game one", description: "This is the first skate game", lat: "23.243242", long: "21.1231231")
-Post.create(title: "Skate game two", description: "This is the 2nd game", lat: "-23.322", long: "42.1231")
+Post.create(
+    title: "Other game", 
+    description: "This is the first skate game", 
+    lat: "43.683744", 
+    long: "-79.331932",
+    date: DateTime.strptime("2015/03/26", "%Y/%m/%d")
+)

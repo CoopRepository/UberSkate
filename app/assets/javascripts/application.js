@@ -26,6 +26,7 @@
 //Gmaps4Rails
 //= require underscore.min
 //= require gmaps/google
+//= require google-maps-utility.min
 
 //Full Calendar
 //= require moment

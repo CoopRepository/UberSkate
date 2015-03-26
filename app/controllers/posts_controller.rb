@@ -131,11 +131,11 @@ class PostsController < ApplicationController
         #{post.lat}
          | 
         #{post.long}
-      
       </div>
       
-      <button>Click me</button>
-      
+      <form action=\"#{request.original_url}/#{post.id}\">
+        <input type=\"submit\" value=\"More..\">
+      </form>
       "
       end
           
@@ -145,7 +145,7 @@ class PostsController < ApplicationController
   def post_params
     
     #require post parameters: (title, description, lat, long)
-    params.require(:post).permit(:title, :description, :lat, :long)
+    params.require(:post).permit(:title, :description, :lat, :long, :date)
   end
   
 end
