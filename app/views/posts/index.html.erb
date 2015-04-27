@@ -23,7 +23,8 @@
                 <center><h1>Welcome to Uberskate</h1>
                 <p>challenge other skaters in your area</p>
                 <a class = "page-scroll" href="#map"><button class = "btn btn-default">Map</button></a>
-                <a class = "btn btn-info">Tweet it!</a></center>
+                
+                <a class = "btn btn-info" href="http://twitter.com/home/?status=@UberSkate ">Tweet it!</a></center>
                 
                 
                 <button class="btn btn-default" onclick="$('#target').toggle();">Show/Hide</button>
@@ -41,6 +42,23 @@
         
         <div class="container" style="padding-bottom:200px;">
               <div id="map" style='position:relative; padding-top:60%; height:200px;'></div>
+              
+              <br>
+              
+              <% if user_signed_in? %>
+                  <%= link_to controller: "posts", action: "new" do%>
+                      <button class="btn btn-default">New</button>
+                  <% end %>
+              <% else %>
+                  <button class="btn btn-default" onclick="alert_user()">New</button>
+                  <script>
+                      function alert_user(){
+                          alert("You need to login first");
+                      }
+                      
+                  </script>
+              <% end %>
+              
         </div>
      
         
@@ -66,10 +84,13 @@
             
         </script>
         
+        
+        
         <%@posts.each do |post|%>
             <h3><%=post.title%>  id: <%=post.id%></h3>
             <%= link_to "Go", controller: "posts", action: "show", id: post.id %> </li>
         <%end%>
       
+          
     </body>
 </html>

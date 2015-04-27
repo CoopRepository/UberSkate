@@ -8,6 +8,8 @@ class CreatePosts < ActiveRecord::Migration
       t.string :long
       
       t.timestampsd
+      
+      t.references :user
     end
   end
 end

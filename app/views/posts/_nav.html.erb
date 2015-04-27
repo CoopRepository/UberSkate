@@ -46,8 +46,6 @@
                         <script> document.getElementById("show").className += "active"; </script>
                     <% end %>
                     <!-- End -->
-                    
-                    
                             
                     <li class = "dropdown">
                                                        
@@ -62,13 +60,31 @@
                                            
                     </li>
                 
-                    
-                    
-                    
                     <li><a href = "#">Contact</a></li>
                     
-                    
-                    
+                    <li>
+                        <div style = "padding-top:15px;" id = "text"> </div>
+                    </li>
+
+                    <script>
+                        removePress();
+
+                        function accountPress(){
+                            document.getElementById('text').innerHTML = 
+                            '<% if not user_signed_in? %>'
+                            +'<a href = "#" onclick="removePress()"><img src="/images/remove_icon.png"></a> <%= link_to "Sign Up", new_user_registration_path %> | <%= link_to "Login", new_user_session_path %>'
+                            + '<% else %>'
+                            + '<%= link_to "Sign out", destroy_user_session_path, method: :delete %> <%= current_user %>'
+                            + '<% end %>'
+                            ;
+                        }
+                        
+                        function removePress(){
+                            document.getElementById('text').innerHTML = 
+                            '<a href = "#" onclick="accountPress()"> <img src="/images/account_icon_small.png"> Account </a>'
+                        }
+                        
+                    </script>
                                    
                 </ul>
                 

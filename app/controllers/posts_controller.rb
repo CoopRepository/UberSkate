@@ -136,6 +136,9 @@ class PostsController < ApplicationController
       <form action=\"#{request.original_url}/#{post.id}\">
         <input type=\"submit\" value=\"More..\">
       </form>
+      
+      <%= link_to \"Profile\", controller: \"posts\", action: \"show\", id: @post.id %>
+      
       "
       end
           
